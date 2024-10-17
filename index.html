@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>加载中……</title>
+    <link rel="icon" href="/system_helper/favicon.ico">
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      var type = get("type");
+      if (type == "content") {
+        document.title = "Windows 帮助文档首页";
+        document.write("1.Windows 登录，锁定，注销<br />");
+        document.write("2.Windows 帐户信息，登录选项，其它用户管理<br />");
+        document.write("所有选项均在开发中……");
+      } else if (type == "main") {
+        var p = get("p");
+        if (p == "1") {
+          document.title = "Windows 登录，锁定，注销";
+          document.write("<b>此页面已更新，详细日志请到首页查看</b><br />内容准备中……");
+        } else if (p == "2") {
+          document.title = "Windows 帐户信息，登录选项，其它用户管理";
+          document.write("<b>此页面已更新，详细日志请到首页查看</b><br />内容准备中……");
+        }
+      }
+    </script>
+  </body>
+</html>
