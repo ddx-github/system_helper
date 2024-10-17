@@ -6,6 +6,14 @@
   <body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
+      function get(name) { 
+         var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i'); 
+         var r = window.location.search.substr(1).match(reg); 
+         if (r != null) { 
+           return unescape(r[2]); 
+         } 
+         return null; 
+       }
       var type = get("type");
       if (type == "content") {
         document.title = "Windows 帮助文档首页";
